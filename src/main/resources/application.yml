@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: biblioteca
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/biblioteca_1
+    username: postgres
+    password: 1604
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true

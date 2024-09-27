@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "9a23ac67-8609-44db-8080-a072f7628b2c",
+		"name": "biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13629104"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"Matheus Perin\",\r\n    \"email\": \"mateus@teste.com\",\r\n    \"dataCadastro\": \"2000-04-16\",\r\n    \"telefone\": \"46999429523\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "carregar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "livro",
+			"item": [
+				{
+					"name": "salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"titulo\": \"Aventuras de um anão 2\",\r\n    \"autor\": \"Desconhecido\",\r\n    \"isbn\": \"123\",\r\n    \"dataPublicacao\": \"2000-01-01\",\r\n    \"categoria\": \"AVENTURA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/livro",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"livro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/livro/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"livro",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "carregar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/livro/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"livro",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recomendacao",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/livro/recomendacao/:userid",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"livro",
+								"recomendacao",
+								":userid"
+							],
+							"variable": [
+								{
+									"key": "userid",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/livro/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"livro",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "disponiveis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/livro/disponiveis",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"livro",
+								"disponiveis"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "emprestimo",
+			"item": [
+				{
+					"name": "salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"usuario\": {\r\n        \"id\": 1,\r\n        \"nome\": \"Matheus Perin\",\r\n        \"email\": \"mateus@teste.com\",\r\n        \"dataCadastro\": \"2000-04-16\",\r\n        \"telefone\": \"46999429523\"\r\n    },\r\n    \"dataEmprestimo\": \"2024-09-25\",\r\n    \"dataDevolucao\": \"2024-09-26\",\r\n    \"situacao\": \"DEVOLVIDO\",\r\n    \"livros\": [\r\n        {\r\n            \"id\": 1,\r\n            \"titulo\": \"Aventuras de um anão\",\r\n            \"autor\": \"Desconhecido\",\r\n            \"isbn\": \"123\",\r\n            \"dataPublicacao\": \"2000-01-01\",\r\n            \"categoria\": \"AVENTURA\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/emprestimo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emprestimo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/emprestimo/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emprestimo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "carregar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/emprestimo/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emprestimo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/emprestimo/listar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"emprestimo",
+								"listar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "google-book-volume",
+			"item": [
+				{
+					"name": "pesquisar-por-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/google/livro/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"google",
+								"livro",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "R7KuDwAAQBAJ"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pesquisar-por-titulo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/google/livro/titulo/:nome",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"google",
+								"livro",
+								"titulo",
+								":nome"
+							],
+							"variable": [
+								{
+									"key": "nome",
+									"value": "Senhor dos Anéis"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
